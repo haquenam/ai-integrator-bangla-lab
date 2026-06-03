@@ -391,6 +391,40 @@ a {
   color: #b8c7d9;
 }
 
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+  text-align: right;
+}
+
+.site-footer .creator-credit {
+  margin: 0;
+  color: #eef6ff;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.9rem;
+}
+
+.footer-links a {
+  color: #cfe2f5;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
 .footer-note {
   text-align: right;
 }
@@ -451,6 +485,15 @@ a {
 
   .site-footer {
     display: grid;
+  }
+
+  .footer-meta {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 
   .footer-note {
