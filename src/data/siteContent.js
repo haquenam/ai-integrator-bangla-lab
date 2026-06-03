@@ -1,10 +1,10 @@
 export const navigationItems = [
   { label: 'হোম', href: '#home' },
   { label: 'রোডম্যাপ', href: '#roadmap' },
+  { label: 'প্রস্তুতি যাচাই', href: '#readiness' },
   { label: 'অনুশীলন', href: '#practice' },
   { label: 'প্রম্পট নির্মাতা', href: '#prompt-builder' },
   { label: 'পোর্টফোলিও', href: '#portfolio' },
-  { label: 'প্রস্তুতি যাচাই', href: '#readiness' },
   { label: 'রিসোর্স', href: '#resources' },
 ];
 
@@ -53,6 +53,13 @@ export const credibilityStats = [
 
 export const placeholderSections = [
   {
+    id: 'readiness',
+    eyebrow: 'নিজেকে যাচাই',
+    title: 'প্রস্তুতি যাচাই',
+    description:
+      'শিক্ষার্থী কোন কাজ জানে, কোন কাজ অনুশীলন করেছে এবং কোন প্রজেক্ট প্রকাশের জন্য প্রস্তুত তা যাচাই করার সহজ যাচাই তালিকা থাকবে।',
+  },
+  {
     id: 'practice',
     eyebrow: 'কাজের অনুশীলন',
     title: 'অনুশীলন',
@@ -72,13 +79,6 @@ export const placeholderSections = [
     title: 'পোর্টফোলিও',
     description:
       'প্রজেক্টের বিবরণ, স্ক্রিনশট পরিকল্পনা, রিডমি কাঠামো এবং গিটহাব প্রকাশনার প্রস্তুতি এখানে ধাপে ধাপে দেখানো হবে।',
-  },
-  {
-    id: 'readiness',
-    eyebrow: 'নিজেকে যাচাই',
-    title: 'প্রস্তুতি যাচাই',
-    description:
-      'শিক্ষার্থী কোন কাজ জানে, কোন কাজ অনুশীলন করেছে এবং কোন প্রজেক্ট প্রকাশের জন্য প্রস্তুত তা যাচাই করার সহজ যাচাই তালিকা থাকবে।',
   },
   {
     id: 'resources',

@@ -5,15 +5,14 @@ This roadmap keeps future AI Integrator Bangla Lab work lightweight, visible, an
 ## Completed
 
 - প্রস্তুতি যাচাই interactive readiness dashboard with checklist, score, readiness level, browser local storage saving, reset, and copy summary.
+- অনুশীলন ব্রিফ নির্মাতা interactive practice brief builder with deterministic browser based generation, copy action, reset action, and browser local storage saving.
 
 ## Now
 
-- অনুশীলন ব্রিফ নির্মাতা.
-- This feature will generate realistic practice briefs for learners based on business type, problem type, assistant type, and difficulty level.
+- এজেন্ট প্র্যাকটিস স্টুডিও.
 
 ## Next
 
-- অনুশীলন ব্রিফ নির্মাতা.
 - Prompt builder.
 - Portfolio builder.
 - Resource section improvement.

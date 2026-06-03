@@ -4,7 +4,13 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 ## Upcoming
 
-- অনুশীলন ব্রিফ নির্মাতা.
+- এজেন্ট প্র্যাকটিস স্টুডিও.
+
+## Version 0.5.0
+
+Practice brief builder release.
+
+Included interactive অনুশীলন ব্রিফ নির্মাতা with business type, problem type, assistant type, difficulty level, learning stage, generated practice brief, copy action, reset action, and browser local storage saving.
 
 ## Version 0.4.0
 

@@ -1154,3 +1154,242 @@ a {
     width: 100%;
   }
 }
+
+.practice-builder {
+  grid-column: 1 / -1;
+  scroll-margin-top: 6rem;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(248, 211, 108, 0.16), transparent 28%),
+    radial-gradient(circle at 88% 4%, rgba(56, 189, 248, 0.15), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid var(--border);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+}
+
+.practice-heading {
+  margin-bottom: 1.5rem;
+}
+
+.practice-subtitle {
+  margin: 0.55rem 0 0.35rem;
+  color: #075985;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 850;
+}
+
+.practice-note {
+  margin: 1rem 0 0;
+  padding: 0.9rem 1rem;
+  color: #7c2d12;
+  font-weight: 750;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 1rem;
+}
+
+.practice-builder-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.practice-form,
+.practice-result-card {
+  border: 1px solid rgba(219, 229, 239, 0.95);
+  border-radius: 1.35rem;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+}
+
+.practice-form {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.15rem, 2.5vw, 1.55rem);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.practice-form-header h3,
+.practice-result-card h3 {
+  margin: 0.55rem 0 0;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  line-height: 1.12;
+}
+
+.practice-chip {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.42rem 0.68rem;
+  color: #075985;
+  font-size: 0.82rem;
+  font-weight: 900;
+  background: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  border-radius: 999px;
+}
+
+.practice-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.practice-field label {
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.practice-field select {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.78rem 0.9rem;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 700;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  border-radius: 0.9rem;
+}
+
+.practice-field select:focus-visible,
+.practice-actions .button:focus-visible,
+.practice-brief-copy:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.45);
+  outline-offset: 3px;
+}
+
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.practice-actions .button,
+.practice-brief-copy {
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.practice-reset {
+  color: #075985;
+  background: #e0f2fe;
+  border-color: rgba(56, 189, 248, 0.28);
+}
+
+.practice-result {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.practice-result-card {
+  padding: clamp(1.15rem, 2.5vw, 1.55rem);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.practice-result-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(219, 229, 239, 0.95);
+}
+
+.practice-brief-copy {
+  flex: 0 0 auto;
+  color: #04111f;
+  font-weight: 850;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
+}
+
+.practice-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.practice-result-meta span {
+  padding: 0.38rem 0.62rem;
+  color: #075985;
+  font-size: 0.82rem;
+  font-weight: 850;
+  background: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 999px;
+}
+
+.practice-brief-sections {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.practice-brief-section {
+  padding: 1rem;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  border: 1px solid rgba(219, 229, 239, 0.95);
+  border-radius: 1rem;
+}
+
+.practice-brief-section h4 {
+  margin: 0 0 0.45rem;
+  color: #075985;
+  font-size: 1rem;
+}
+
+.practice-brief-section p {
+  margin: 0;
+  color: var(--navy);
+  white-space: pre-line;
+}
+
+.practice-empty {
+  display: grid;
+  min-height: 24rem;
+  align-content: center;
+  background:
+    radial-gradient(circle at 78% 16%, rgba(45, 212, 191, 0.16), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #eef4fb 100%);
+}
+
+.practice-empty p:not(.readiness-card-label),
+.practice-status {
+  color: var(--muted);
+}
+
+.practice-status {
+  min-height: 1.35rem;
+  margin: 0;
+  font-weight: 850;
+}
+
+@media (max-width: 1050px) {
+  .practice-builder-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .practice-builder {
+    border-radius: 1.35rem;
+  }
+
+  .practice-actions,
+  .practice-result-topline {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .practice-actions .button,
+  .practice-brief-copy {
+    width: 100%;
+  }
+}

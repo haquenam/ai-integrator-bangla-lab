@@ -226,6 +226,9 @@ export default function ReadinessDashboard() {
           </ol>
           <p className="readiness-note">{readinessIntro.privacyNote}</p>
           <div className="readiness-actions">
+            <a className="button button-primary" href="#practice">
+              অনুশীলন ব্রিফ তৈরি করুন
+            </a>
             <button className="button button-primary" type="button" onClick={handleCopySummary}>
               সারাংশ কপি করুন
             </button>

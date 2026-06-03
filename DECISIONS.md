@@ -21,3 +21,7 @@ This decision log records lightweight product and governance decisions for AI In
 ## Decision 5: Future features should be described carefully
 
 **Reason:** The site should inspire learners without promising income, jobs, clients, prizes, or guaranteed recognition.
+
+## Decision 6: Practice brief generation is deterministic and browser based for now
+
+**Reason:** Keeps the platform free, safe, static, and independent of paid API keys.
