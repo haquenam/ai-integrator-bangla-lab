@@ -1,5 +1,6 @@
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
+import Roadmap from './components/Roadmap.jsx';
 import {
   credibilityStats,
   featureCards,
@@ -127,6 +128,7 @@ export default function App() {
         <CredibilityStrip />
         <Journey />
         <FeatureSection />
+        <Roadmap />
         <PlaceholderSections />
       </main>
       <Footer />

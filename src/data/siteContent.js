@@ -53,13 +53,6 @@ export const credibilityStats = [
 
 export const placeholderSections = [
   {
-    id: 'roadmap',
-    eyebrow: 'শেখার পথ',
-    title: 'রোডম্যাপ',
-    description:
-      'প্রথম সংস্করণে এখানে এআই ইন্টিগ্রেটর শেখার ধাপভিত্তিক পরিকল্পনা রাখা হবে। শুরুতে ভিত্তি, তারপর কাস্টম জিপিটি, নলেজ বেস, এপিআই ধারণা এবং প্রজেক্ট অনুশীলন আসবে।',
-  },
-  {
     id: 'practice',
     eyebrow: 'কাজের অনুশীলন',
     title: 'অনুশীলন',
