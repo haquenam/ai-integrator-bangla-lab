@@ -12,7 +12,20 @@ function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
-        <p className="eyebrow">বাংলা অনুশীলন ল্যাব</p>
+        <div className="hero-eyebrow-row">
+          <p className="eyebrow">বাংলা অনুশীলন ল্যাব</p>
+          <span className="brand-ecosystem">
+            টেক টকস বাংলা শেখার ইকোসিস্টেমের অংশ
+            <a
+              className="brand-ecosystem-link"
+              href="https://techtalksbangla.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              টেক টকস বাংলা
+            </a>
+          </span>
+        </div>
         <h1>AI Integrator Bangla Lab</h1>
         <p className="hero-subtitle">ভবিষ্যৎ এআই ইন্টিগ্রেটরদের জন্য বাংলা অনুশীলন ল্যাব</p>
         <p className="hero-positioning">
