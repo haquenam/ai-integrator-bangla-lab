@@ -4,11 +4,61 @@ import {
   vision2028Cards,
 } from '../data/roadmapContent.js';
 
+const PLACEHOLDER_PATTERNS = ['placeholder', 'example.com', 'your-video', 'ভিডিও-লিংক'];
+
+function hasPublishedVideo(module) {
+  const embedUrl = module.videoEmbedUrl?.trim();
+
+  if (!embedUrl || embedUrl === '#') {
+    return false;
+  }
+
+  return !PLACEHOLDER_PATTERNS.some((pattern) => embedUrl.toLowerCase().includes(pattern));
+}
+
+function ModuleVideo({ module }) {
+  if (!hasPublishedVideo(module)) {
+    return null;
+  }
+
+  const videoTitle = module.videoTitle || `${module.title} ভিডিও`;
+
+  return (
+    <div className="video-card" aria-label={`${module.title} ভিডিও`}>
+      <div className="video-frame">
+        <iframe
+          src={module.videoEmbedUrl}
+          title={videoTitle}
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+      <a
+        className="video-link"
+        href={module.videoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ইউটিউবে দেখুন
+      </a>
+    </div>
+  );
+}
+
 function ModuleCard({ module }) {
+  const hasVideo = hasPublishedVideo(module);
+
   return (
     <article className="roadmap-card">
       <div className="roadmap-card-header">
-        <span className="module-number">ধাপ {module.number}</span>
+        <div className="module-meta">
+          <span className="module-number">ধাপ {module.number}</span>
+          {hasVideo && module.videoStatus === 'প্রকাশিত' ? (
+            <span className="published-video-badge">প্রকাশিত ভিডিও</span>
+          ) : null}
+        </div>
         <h3>{module.title}</h3>
       </div>
       <div className="roadmap-card-body">
@@ -25,6 +75,7 @@ function ModuleCard({ module }) {
           <p>{module.evidence}</p>
         </div>
       </div>
+      <ModuleVideo module={module} />
     </article>
   );
 }

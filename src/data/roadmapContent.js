@@ -7,6 +7,10 @@ export const coreRoadmapModules = [
     practice:
       'একটি ছোট ব্যবসার তিনটি কাজ লিখুন যেখানে এআই যুক্ত করলে সময় বাঁচতে পারে বা সেবা উন্নত হতে পারে।',
     evidence: 'নিজের ভাষায় এআই ইন্টিগ্রেটর ভূমিকার একটি সংক্ষিপ্ত ব্যাখ্যা।',
+    videoTitle: 'ভিডিও ১ দেখুন',
+    videoUrl: 'https://youtu.be/GBQbg1quu2Y?si=CX1qB2zaKkPMkuX2',
+    videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/GBQbg1quu2Y',
+    videoStatus: 'প্রকাশিত',
   },
   {
     number: '০২',
@@ -15,6 +19,10 @@ export const coreRoadmapModules = [
       'এই ১০ ভিডিও সিরিজে কী শেখা হবে, কোন ধাপে কী আসবে, এবং কীভাবে একজন শিক্ষার্থী শূন্য থেকে বাস্তব অনুশীলনের পথে এগোবে।',
     practice: 'নিজের ৩০ দিনের শেখার পরিকল্পনা লিখুন।',
     evidence: 'নিজের শেখার পরিকল্পনার একটি প্রকাশযোগ্য খসড়া।',
+    videoTitle: 'ভিডিও ২ দেখুন',
+    videoUrl: 'https://youtu.be/W-QB2l-MITY?si=Bp0JNtcw0FpzI35G',
+    videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/W-QB2l-MITY',
+    videoStatus: 'প্রকাশিত',
   },
   {
     number: '০৩',
@@ -23,6 +31,10 @@ export const coreRoadmapModules = [
       'হাতে কলমে একটি কাস্টম জিপিটি তৈরি করা, যাতে শিক্ষার্থী শুরুতেই একটি ব্যবহারযোগ্য ফলাফল দেখতে পারে।',
     practice: 'একটি রেস্টুরেন্ট, ট্রাভেল এজেন্সি বা ছোট ব্যবসার জন্য কাস্টম জিপিটি পরিকল্পনা করুন।',
     evidence: 'সহকারীর নাম, কাজের বিবরণ, নির্দেশনা, সীমা এবং পরীক্ষার প্রশ্ন।',
+    videoTitle: 'ভিডিও ৩ দেখুন',
+    videoUrl: 'https://youtu.be/HErmc0mTKVk?si=ou2jQl1ip6vHveu7',
+    videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/HErmc0mTKVk',
+    videoStatus: 'প্রকাশিত',
   },
   {
     number: '০৪',
@@ -31,6 +43,10 @@ export const coreRoadmapModules = [
       'কথোপকথনের বাইরে গিয়ে এআইকে কাজভিত্তিক সহকারী হিসেবে ব্যবহার করা এবং কাজের প্রবাহে যুক্ত করার ধারণা।',
     practice: 'একটি অফিস নীতিমালা, ছুটি সহায়তা বা কর্মী সহায়তা এজেন্টের পরিকল্পনা লিখুন।',
     evidence: 'কাজভিত্তিক সহকারীর ব্যবহার চিত্র এবং কাজের তালিকা।',
+    videoTitle: 'ভিডিও ৪ দেখুন',
+    videoUrl: 'https://youtu.be/8rFHm_YTWEc?si=-WVb6dJdR6Yx79cW',
+    videoEmbedUrl: 'https://www.youtube-nocookie.com/embed/8rFHm_YTWEc',
+    videoStatus: 'প্রকাশিত',
   },
   {
     number: '০৫',
