@@ -152,9 +152,14 @@ export default function PracticeBriefBuilder() {
                   <p className="readiness-card-label">তৈরি করা ব্রিফ</p>
                   <h3 id="practice-result-title">{brief.sections[0].content}</h3>
                 </div>
-                <button className="practice-brief-copy" type="button" onClick={handleCopyBrief}>
-                  ব্রিফ কপি করুন
-                </button>
+                <div className="practice-result-actions">
+                  <button className="practice-brief-copy" type="button" onClick={handleCopyBrief}>
+                    ব্রিফ কপি করুন
+                  </button>
+                  <a className="practice-agent-link" href="#prompt-builder">
+                    এজেন্ট প্যাক তৈরি করুন
+                  </a>
+                </div>
               </div>
 
               <div className="practice-result-meta" aria-label="নির্বাচিত তথ্য">

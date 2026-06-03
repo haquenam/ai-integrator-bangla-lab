@@ -25,3 +25,7 @@ This decision log records lightweight product and governance decisions for AI In
 ## Decision 6: Practice brief generation is deterministic and browser based for now
 
 **Reason:** Keeps the platform free, safe, static, and independent of paid API keys.
+
+## Decision 7: Agent build pack generation is deterministic and browser based for now
+
+**Reason:** Keeps the platform free, safe, static, and independent of paid API keys or external agent platforms.

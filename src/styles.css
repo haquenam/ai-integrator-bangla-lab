@@ -1393,3 +1393,325 @@ a {
     width: 100%;
   }
 }
+
+.practice-result-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.practice-agent-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  color: #075985;
+  font: inherit;
+  font-weight: 850;
+  background: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 999px;
+}
+
+.practice-agent-link:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.45);
+  outline-offset: 3px;
+}
+
+.agent-studio {
+  grid-column: 1 / -1;
+  scroll-margin-top: 6rem;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 12%, rgba(56, 189, 248, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 6%, rgba(45, 212, 191, 0.16), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid var(--border);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+}
+
+.agent-studio-heading {
+  margin-bottom: 1.5rem;
+}
+
+.agent-studio-subtitle {
+  margin: 0.55rem 0 0.35rem;
+  color: #075985;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 850;
+}
+
+.agent-studio-note {
+  margin: 1rem 0 0;
+  padding: 0.9rem 1rem;
+  color: #7c2d12;
+  font-weight: 750;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 1rem;
+}
+
+.agent-studio-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.agent-studio-form,
+.agent-studio-result-card {
+  border: 1px solid rgba(219, 229, 239, 0.95);
+  border-radius: 1.35rem;
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.08);
+}
+
+.agent-studio-form {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.15rem, 2.5vw, 1.55rem);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.agent-studio-form-header h3,
+.agent-studio-result-card h3 {
+  margin: 0.55rem 0 0;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  line-height: 1.12;
+}
+
+.agent-studio-chip {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.42rem 0.68rem;
+  color: #075985;
+  font-size: 0.82rem;
+  font-weight: 900;
+  background: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  border-radius: 999px;
+}
+
+.agent-studio-brief-note {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  color: #075985;
+  background: #e0f2fe;
+  border-color: rgba(56, 189, 248, 0.28);
+}
+
+.agent-studio-brief-note p {
+  margin: 0;
+}
+
+.agent-studio-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--navy);
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.agent-studio-checkbox input {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.18rem;
+  accent-color: #0284c7;
+}
+
+.agent-studio-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.agent-studio-field label {
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.agent-studio-field select,
+.agent-studio-field input,
+.agent-studio-field textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.78rem 0.9rem;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 700;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  border-radius: 0.9rem;
+}
+
+.agent-studio-field textarea {
+  resize: vertical;
+}
+
+.agent-studio-field select:focus-visible,
+.agent-studio-field input:focus-visible,
+.agent-studio-field textarea:focus-visible,
+.agent-studio-actions .button:focus-visible,
+.agent-studio-copy button:focus-visible,
+.agent-studio-checkbox input:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.45);
+  outline-offset: 3px;
+}
+
+.agent-studio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.agent-studio-actions .button,
+.agent-studio-copy button {
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.agent-studio-reset {
+  color: #075985;
+  background: #e0f2fe;
+  border-color: rgba(56, 189, 248, 0.28);
+}
+
+.agent-studio-result {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.agent-studio-result-card {
+  padding: clamp(1.15rem, 2.5vw, 1.55rem);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.agent-studio-result-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(219, 229, 239, 0.95);
+}
+
+.agent-studio-copy {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: flex-end;
+}
+
+.agent-studio-copy button {
+  color: #04111f;
+  font-weight: 850;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
+}
+
+.agent-studio-copy button + button {
+  color: #075985;
+  background: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: none;
+}
+
+.agent-studio-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.agent-studio-meta span,
+.agent-studio-chip {
+  padding: 0.38rem 0.62rem;
+  color: #075985;
+  font-size: 0.82rem;
+  font-weight: 850;
+  background: #e0f2fe;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 999px;
+}
+
+.agent-studio-sections {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.agent-studio-section {
+  padding: 1rem;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+  border: 1px solid rgba(219, 229, 239, 0.95);
+  border-radius: 1rem;
+}
+
+.agent-studio-section h4 {
+  margin: 0 0 0.45rem;
+  color: #075985;
+  font-size: 1rem;
+}
+
+.agent-studio-section p {
+  margin: 0;
+  color: var(--navy);
+  white-space: pre-line;
+}
+
+.agent-studio-empty {
+  display: grid;
+  min-height: 24rem;
+  align-content: center;
+  background:
+    radial-gradient(circle at 78% 16%, rgba(45, 212, 191, 0.16), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #eef4fb 100%);
+}
+
+.agent-studio-empty p:not(.readiness-card-label),
+.agent-studio-status {
+  color: var(--muted);
+}
+
+.agent-studio-status {
+  min-height: 1.35rem;
+  margin: 0;
+  font-weight: 850;
+}
+
+@media (max-width: 1050px) {
+  .agent-studio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .practice-result-actions,
+  .agent-studio-actions,
+  .agent-studio-result-topline,
+  .agent-studio-copy {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .practice-agent-link,
+  .agent-studio-actions .button,
+  .agent-studio-copy button {
+    width: 100%;
+  }
+
+  .agent-studio {
+    border-radius: 1.35rem;
+  }
+}
