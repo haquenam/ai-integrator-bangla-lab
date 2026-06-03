@@ -4,7 +4,7 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 ## Upcoming
 
-- প্রস্তুতি যাচাই interactive readiness dashboard.
+- Added interactive readiness dashboard for প্রস্তুতি যাচাই with checklist, score, readiness level, browser local storage saving, reset, and copy summary actions.
 
 ## Version 0.3.0
 
