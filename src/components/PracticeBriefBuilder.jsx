@@ -103,6 +103,10 @@ export default function PracticeBriefBuilder() {
     <section className="practice-builder" id="practice" aria-labelledby="practice-title">
       <div className="section-heading practice-heading">
         <p className="eyebrow">{practiceBriefIntro.eyebrow}</p>
+        <div className="practice-stage-label" aria-label="ধাপ ১: অনুশীলনের বিষয় নির্বাচন">
+          <span>ধাপ ১</span>
+          <strong>অনুশীলনের বিষয় নির্বাচন</strong>
+        </div>
         <h2 id="practice-title">{practiceBriefIntro.title}</h2>
         <p className="practice-subtitle">{practiceBriefIntro.subtitle}</p>
         <p>{practiceBriefIntro.description}</p>
@@ -113,7 +117,8 @@ export default function PracticeBriefBuilder() {
         <form className="practice-form" onSubmit={handleGenerateBrief}>
           <div className="practice-form-header">
             <span className="practice-chip">আমি এখন কী নিয়ে অনুশীলন করব?</span>
-            <h3>আপনার অনুশীলনের ধরন বেছে নিন</h3>
+            <h3>অনুশীলনের প্রেক্ষাপট বেছে নিন</h3>
+            <p>প্রথমে একটি বাস্তবধর্মী ব্যবসা, সমস্যা এবং শেখার ধাপ নির্বাচন করুন।</p>
           </div>
 
           {practiceFormFields.map((field) => (
@@ -146,7 +151,8 @@ export default function PracticeBriefBuilder() {
 
         <div className="practice-result" aria-live="polite">
           {brief ? (
-            <article className="practice-result-card" aria-labelledby="practice-result-title">
+            <article className="practice-result-card practice-brief-document" aria-labelledby="practice-result-title">
+              <p className="practice-brief-result-label">প্র্যাকটিস ব্রিফ</p>
               <div className="practice-result-topline">
                 <div>
                   <p className="readiness-card-label">তৈরি করা ব্রিফ</p>
@@ -156,7 +162,7 @@ export default function PracticeBriefBuilder() {
                   <button className="practice-brief-copy" type="button" onClick={handleCopyBrief}>
                     ব্রিফ কপি করুন
                   </button>
-                  <a className="practice-agent-link" href="#prompt-builder">
+                  <a className="practice-agent-link practice-next-stage" href="#prompt-builder">
                     এজেন্ট প্যাক তৈরি করুন
                   </a>
                 </div>
@@ -172,7 +178,15 @@ export default function PracticeBriefBuilder() {
 
               <div className="practice-brief-sections">
                 {brief.sections.map((section) => (
-                  <section className="practice-brief-section" key={section.label}>
+                  <section
+                    className={`practice-brief-section${section.label === 'পরবর্তী ধাপ' ? ' practice-brief-next-step' : ''}`}
+                    key={section.label}
+                  >
+                    {section.label === 'পরবর্তী ধাপ' && (
+                      <div className="practice-brief-transition" aria-hidden="true">
+                        এজেন্ট স্টুডিওতে নেওয়ার প্রস্তুতি
+                      </div>
+                    )}
                     <h4>{section.label}</h4>
                     <p>{section.content}</p>
                   </section>

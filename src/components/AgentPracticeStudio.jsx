@@ -133,6 +133,10 @@ export default function AgentPracticeStudio() {
     <section className="agent-studio" id="prompt-builder" aria-labelledby="agent-studio-title">
       <div className="section-heading agent-studio-heading">
         <p className="eyebrow">{agentStudioIntro.eyebrow}</p>
+        <div className="agent-stage-label" aria-label="ধাপ ২: সহকারী তৈরির প্যাক প্রস্তুত">
+          <span>ধাপ ২</span>
+          <strong>সহকারী তৈরির প্যাক প্রস্তুত</strong>
+        </div>
         <h2 id="agent-studio-title">{agentStudioIntro.title}</h2>
         <p className="agent-studio-subtitle">{agentStudioIntro.subtitle}</p>
         <p>{agentStudioIntro.description}</p>
@@ -143,11 +147,13 @@ export default function AgentPracticeStudio() {
         <form className="agent-studio-form" onSubmit={handleGeneratePack}>
           <div className="agent-studio-form-header">
             <span className="agent-studio-chip">এই অনুশীলনকে কীভাবে সহকারী বানাব?</span>
-            <h3>সহকারীর প্যাক সাজান</h3>
+            <h3>এজেন্টের কাঠামো সাজান</h3>
+            <p>এখানে সহকারীর ধরন, নির্দেশনা, নলেজ বেস, গার্ডরেইল এবং পরীক্ষা সাজানো হবে।</p>
           </div>
 
           {practiceBriefContext && (
-            <div className="agent-studio-note agent-studio-brief-note">
+            <div className="agent-studio-note agent-studio-brief-note agent-linked-brief-note">
+              <p className="agent-linked-brief-kicker">পূর্বের ব্রিফ যুক্ত করা যাবে</p>
               <p>{agentStudioMessages.practiceBriefFound}</p>
               <label className="agent-studio-checkbox" htmlFor="agent-use-practice-brief">
                 <input
@@ -213,13 +219,14 @@ export default function AgentPracticeStudio() {
 
         <div className="agent-studio-result" aria-live="polite">
           {agentPack ? (
-            <article className="agent-studio-result-card" aria-labelledby="agent-studio-result-title">
+            <article className="agent-studio-result-card agent-blueprint-panel" aria-labelledby="agent-studio-result-title">
+              <p className="agent-build-pack-label">এজেন্ট বিল্ড প্যাক</p>
               <div className="agent-studio-result-topline">
                 <div>
                   <p className="readiness-card-label">তৈরি করা এজেন্ট প্যাক</p>
                   <h3 id="agent-studio-result-title">{agentPack.sections[0].content}</h3>
                 </div>
-                <div className="agent-studio-copy" aria-label="কপি করার কাজ">
+                <div className="agent-studio-copy agent-delivery-actions" aria-label="কপি করার কাজ">
                   <button type="button" onClick={handleCopyFullPack}>
                     পুরো প্যাক কপি করুন
                   </button>
