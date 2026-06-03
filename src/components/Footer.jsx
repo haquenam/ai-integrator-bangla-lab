@@ -7,7 +7,7 @@ export default function Footer() {
       </div>
       <div className="footer-meta">
         <p className="creator-credit">Built by Enamul Haque</p>
-        <nav className="footer-links" aria-label="Creator links">
+        <nav className="footer-links" aria-label="নির্মাতার লিংক">
           <a href="https://www.linkedin.com/in/haquenam/" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
@@ -15,7 +15,7 @@ export default function Footer() {
             GitHub
           </a>
         </nav>
-        <p className="footer-note">No login · No backend · No API keys · Public learning only</p>
+        <p className="footer-note">লগইন নেই। ব্যাকএন্ড নেই। এপিআই কী নেই। শুধু নিরাপদ পাবলিক শেখার জন্য।</p>
       </div>
     </footer>
   );

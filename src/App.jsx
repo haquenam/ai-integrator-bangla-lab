@@ -13,13 +13,13 @@ function Hero() {
       <div className="hero-content">
         <p className="eyebrow">বাংলা অনুশীলন ল্যাব</p>
         <h1>AI Integrator Bangla Lab</h1>
-        <p className="hero-subtitle">The Bangla Practice Lab For Future AI Integrators</p>
+        <p className="hero-subtitle">ভবিষ্যৎ এআই ইন্টিগ্রেটরদের জন্য বাংলা অনুশীলন ল্যাব</p>
         <p className="hero-positioning">
           ব্যবসা প্রতিষ্ঠানগুলো নতুন এআই মডেল বানাতে চায় না। তারা তাদের বিদ্যমান ওয়েবসাইট,
           ফাইল, গ্রাহক বার্তা, নীতিমালা, পণ্য তালিকা এবং কাজের প্রক্রিয়ার সঙ্গে এআই যুক্ত
           করতে চায়। এই কাজটাই করে একজন এআই ইন্টিগ্রেটর।
         </p>
-        <div className="hero-actions" aria-label="Primary actions">
+        <div className="hero-actions" aria-label="প্রধান কাজের লিংক">
           <a className="button button-primary" href="#roadmap">
             শেখা শুরু করুন
           </a>
@@ -31,7 +31,7 @@ function Hero() {
           </a>
         </div>
       </div>
-      <aside className="hero-panel" aria-label="Learning lab highlights">
+      <aside className="hero-panel" aria-label="শেখার ল্যাবের মূল দিক">
         <span className="panel-kicker">প্রথম সংস্করণ</span>
         <h2>ভিডিও থেকে বাস্তব অনুশীলনে যাওয়ার পথ</h2>
         <p>
@@ -51,7 +51,7 @@ function Hero() {
 
 function CredibilityStrip() {
   return (
-    <section className="credibility-strip" aria-label="Learning hub statistics">
+    <section className="credibility-strip" aria-label="শেখার কেন্দ্রের পরিসংখ্যান">
       {credibilityStats.map((stat) => (
         <div key={stat} className="stat-card">
           {stat}
