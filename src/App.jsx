@@ -2,6 +2,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Roadmap from './components/Roadmap.jsx';
 import ReadinessDashboard from './components/ReadinessDashboard.jsx';
+import PracticeBriefBuilder from './components/PracticeBriefBuilder.jsx';
 import {
   credibilityStats,
   featureCards,
@@ -124,6 +125,10 @@ function PlaceholderSections() {
       {placeholderSections.map((section) => {
         if (section.id === 'readiness') {
           return <ReadinessDashboard key={section.id} />;
+        }
+
+        if (section.id === 'practice') {
+          return <PracticeBriefBuilder key={section.id} />;
         }
 
         return (
