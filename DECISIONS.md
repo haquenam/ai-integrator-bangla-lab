@@ -8,7 +8,7 @@ This decision log records lightweight product and governance decisions for AI In
 
 ## Decision 2: Learner progress will use browser local storage first
 
-**Reason:** Allows saving without login, database, or personal data collection.
+**Reason:** Allows saving without login, database, or personal data collection. Readiness progress stays in the learner's browser local storage only and does not send personal information anywhere.
 
 ## Decision 3: No certificate feature in the first phase
 

@@ -1,6 +1,7 @@
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Roadmap from './components/Roadmap.jsx';
+import ReadinessDashboard from './components/ReadinessDashboard.jsx';
 import {
   credibilityStats,
   featureCards,
@@ -120,14 +121,20 @@ function FeatureSection() {
 function PlaceholderSections() {
   return (
     <div className="placeholder-wrapper">
-      {placeholderSections.map((section) => (
-        <section className="placeholder-section" id={section.id} key={section.id}>
-          <p className="eyebrow">{section.eyebrow}</p>
-          <h2>{section.title}</h2>
-          <p>{section.description}</p>
-          <span className="coming-soon">পরবর্তী সংস্করণে বিস্তারিত আসছে</span>
-        </section>
-      ))}
+      {placeholderSections.map((section) => {
+        if (section.id === 'readiness') {
+          return <ReadinessDashboard key={section.id} />;
+        }
+
+        return (
+          <section className="placeholder-section" id={section.id} key={section.id}>
+            <p className="eyebrow">{section.eyebrow}</p>
+            <h2>{section.title}</h2>
+            <p>{section.description}</p>
+            <span className="coming-soon">পরবর্তী সংস্করণে বিস্তারিত আসছে</span>
+          </section>
+        );
+      })}
     </div>
   );
 }

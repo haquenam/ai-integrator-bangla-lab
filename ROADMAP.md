@@ -4,8 +4,8 @@ This roadmap keeps future AI Integrator Bangla Lab work lightweight, visible, an
 
 ## Now
 
-- Interactive readiness dashboard for প্রস্তুতি যাচাই.
-- The dashboard will include checklist, score, readiness level, progress percentage, browser based saving, reset button, and copy summary.
+- Interactive readiness dashboard for প্রস্তুতি যাচাই is being implemented in this release.
+- This release includes checklist, score, readiness level, progress percentage, browser based saving, reset button, and copy summary.
 
 ## Next
 
