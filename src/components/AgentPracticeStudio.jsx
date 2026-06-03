@@ -142,7 +142,7 @@ export default function AgentPracticeStudio() {
       <div className="agent-studio-grid">
         <form className="agent-studio-form" onSubmit={handleGeneratePack}>
           <div className="agent-studio-form-header">
-            <span className="agent-studio-chip">এই অনুশীলনকে কীভাবে সহকারী বানাব?</span>
+            <span className="agent-studio-stage-label">ধাপ ২ সহকারী তৈরির প্যাক প্রস্তুত</span>
             <h3>সহকারীর প্যাক সাজান</h3>
           </div>
 
@@ -216,7 +216,7 @@ export default function AgentPracticeStudio() {
             <article className="agent-studio-result-card" aria-labelledby="agent-studio-result-title">
               <div className="agent-studio-result-topline">
                 <div>
-                  <p className="readiness-card-label">তৈরি করা এজেন্ট প্যাক</p>
+                  <p className="agent-studio-result-label">এজেন্ট বিল্ড প্যাক</p>
                   <h3 id="agent-studio-result-title">{agentPack.sections[0].content}</h3>
                 </div>
                 <div className="agent-studio-copy" aria-label="কপি করার কাজ">
@@ -249,7 +249,7 @@ export default function AgentPracticeStudio() {
             </article>
           ) : (
             <article className="agent-studio-result-card agent-studio-empty" aria-labelledby="agent-studio-empty-title">
-              <p className="readiness-card-label">ফলাফল</p>
+              <p className="agent-studio-result-label">ফলাফল</p>
               <h3 id="agent-studio-empty-title">এখনও কোনো এজেন্ট প্যাক তৈরি হয়নি</h3>
               <p>
                 বাম পাশের ফর্ম থেকে সহকারীর ধরন, ব্যবহারের ক্ষেত্র, ভাষা, নিরাপত্তা এবং নলেজ বেস

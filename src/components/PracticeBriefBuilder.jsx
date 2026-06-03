@@ -112,7 +112,7 @@ export default function PracticeBriefBuilder() {
       <div className="practice-builder-grid">
         <form className="practice-form" onSubmit={handleGenerateBrief}>
           <div className="practice-form-header">
-            <span className="practice-chip">আমি এখন কী নিয়ে অনুশীলন করব?</span>
+            <span className="practice-stage-label">ধাপ ১ অনুশীলনের বিষয় নির্বাচন</span>
             <h3>আপনার অনুশীলনের ধরন বেছে নিন</h3>
           </div>
 
@@ -149,7 +149,7 @@ export default function PracticeBriefBuilder() {
             <article className="practice-result-card" aria-labelledby="practice-result-title">
               <div className="practice-result-topline">
                 <div>
-                  <p className="readiness-card-label">তৈরি করা ব্রিফ</p>
+                  <p className="practice-result-label">প্র্যাকটিস ব্রিফ</p>
                   <h3 id="practice-result-title">{brief.sections[0].content}</h3>
                 </div>
                 <div className="practice-result-actions">
@@ -181,7 +181,7 @@ export default function PracticeBriefBuilder() {
             </article>
           ) : (
             <article className="practice-result-card practice-empty" aria-labelledby="practice-empty-title">
-              <p className="readiness-card-label">ফলাফল</p>
+              <p className="practice-result-label">ফলাফল</p>
               <h3 id="practice-empty-title">এখনও কোনো ব্রিফ তৈরি হয়নি</h3>
               <p>
                 বাম পাশের ফর্ম থেকে ব্যবসা, সমস্যা, সহকারীর ধরন, কঠিনতার স্তর এবং শেখার ধাপ বেছে
