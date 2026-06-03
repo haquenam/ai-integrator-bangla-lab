@@ -117,15 +117,15 @@ export default function ReadinessDashboard() {
 
   async function handleCopySummary() {
     const summaryText = [
-      'AI Integrator Bangla Lab readiness summary',
-      `Readiness level: ${readinessLevel.level}`,
-      `Score: ${score}/${readinessTotalItems}`,
-      `Progress percentage: ${progressPercentage}%`,
-      'Completed checklist items:',
+      'AI Integrator Bangla Lab প্রস্তুতি সারাংশ',
+      `বর্তমান স্তর: ${readinessLevel.level}`,
+      `স্কোর: ${score}/${readinessTotalItems}`,
+      `অগ্রগতি: ${progressPercentage}%`,
+      'সম্পন্ন আইটেম:',
       ...(completedItems.length > 0 ? completedItems.map((item) => `- ${item}`) : ['- কোনো আইটেম সম্পন্ন হয়নি']),
-      'Recommended next steps:',
+      'সুপারিশ করা পরবর্তী কাজ:',
       ...readinessLevel.nextSteps.map((step) => `- ${step}`),
-      `Last updated date: ${formattedLastUpdated || 'এখনও সংরক্ষণ হয়নি'}`,
+      `শেষ হালনাগাদ: ${formattedLastUpdated || 'এখনও সংরক্ষণ হয়নি'}`,
     ].join('\n');
 
     try {
