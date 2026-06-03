@@ -3,6 +3,7 @@ import Footer from './components/Footer.jsx';
 import Roadmap from './components/Roadmap.jsx';
 import ReadinessDashboard from './components/ReadinessDashboard.jsx';
 import PracticeBriefBuilder from './components/PracticeBriefBuilder.jsx';
+import AgentPracticeStudio from './components/AgentPracticeStudio.jsx';
 import {
   credibilityStats,
   featureCards,
@@ -129,6 +130,10 @@ function PlaceholderSections() {
 
         if (section.id === 'practice') {
           return <PracticeBriefBuilder key={section.id} />;
+        }
+
+        if (section.id === 'prompt-builder') {
+          return <AgentPracticeStudio key={section.id} />;
         }
 
         return (

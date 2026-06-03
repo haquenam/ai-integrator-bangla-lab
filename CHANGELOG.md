@@ -4,7 +4,13 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 ## Upcoming
 
-- এজেন্ট প্র্যাকটিস স্টুডিও.
+- পোর্টফোলিও প্রস্তুতকারী.
+
+## Version 0.6.0
+
+Agent Practice Studio release.
+
+Included interactive এজেন্ট প্র্যাকটিস স্টুডিও with assistant type, use case, tone, safety level, knowledge source, assistant name, assistant task, saved practice brief context, generated agent build pack, copy actions, reset action, and browser local storage saving.
 
 ## Version 0.5.0
 
