@@ -27,6 +27,12 @@ The initial foundation includes polished Home content and placeholder sections f
 - Curated resource library for safe public learning materials.
 - Separate professional English output areas for GitHub, freelancing profiles, and client proposals.
 
+## Project Documentation
+
+- [CHANGELOG.md](./CHANGELOG.md)
+- [ROADMAP.md](./ROADMAP.md)
+- [DECISIONS.md](./DECISIONS.md)
+
 ## Technology Stack
 
 - Vite
