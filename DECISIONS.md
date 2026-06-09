@@ -29,3 +29,7 @@ This decision log records lightweight product and governance decisions for AI In
 ## Decision 7: Agent build pack generation is deterministic and browser based for now
 
 **Reason:** Keeps the platform free, safe, static, and independent of paid API keys or external agent platforms.
+
+## Decision 8: Portfolio publishing remains manual
+
+**Reason:** Portfolio builder stores data only in browser local storage and does not publish directly to GitHub or LinkedIn, to keep the lab safe, simple, and beginner friendly.
