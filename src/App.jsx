@@ -5,6 +5,7 @@ import ReadinessDashboard from './components/ReadinessDashboard.jsx';
 import PracticeBriefBuilder from './components/PracticeBriefBuilder.jsx';
 import AgentPracticeStudio from './components/AgentPracticeStudio.jsx';
 import PortfolioBuilder from './components/PortfolioBuilder.jsx';
+import ResourcesLibrary from './components/ResourcesLibrary.jsx';
 import {
   credibilityStats,
   featureCards,
@@ -139,6 +140,10 @@ function PlaceholderSections() {
 
         if (section.id === 'portfolio') {
           return <PortfolioBuilder key={section.id} />;
+        }
+
+        if (section.id === 'resources') {
+          return <ResourcesLibrary key={section.id} />;
         }
 
         return (

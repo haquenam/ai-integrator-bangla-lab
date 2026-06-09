@@ -33,3 +33,7 @@ This decision log records lightweight product and governance decisions for AI In
 ## Decision 8: Portfolio publishing remains manual
 
 **Reason:** Portfolio builder stores data only in browser local storage and does not publish directly to GitHub or LinkedIn, to keep the lab safe, simple, and beginner friendly.
+
+## Decision 9: Resources library starts as a static learning hub
+
+**Reason:** The first resources version provides structured links, guidance, safety notes, and planned resources without file upload, login, backend, or download generation. This keeps the lab simple, safe, and maintainable.
