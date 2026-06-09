@@ -4,7 +4,13 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 ## Upcoming
 
-- Added portfolio builder section with local draft saving, readiness checklist, portfolio draft, README draft, and LinkedIn post draft.
+- রিসোর্স ডাউনলোড ও টেমপ্লেট উন্নয়ন.
+
+## Version 0.8.0
+
+Resources library release.
+
+Included structured রিসোর্স লাইব্রেরি with quick start cards, released video links, upcoming lesson resource map, practice and template cards, safety notes, and future resource planning.
 
 ## Version 0.6.0
 
