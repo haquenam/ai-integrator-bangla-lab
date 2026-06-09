@@ -2325,3 +2325,307 @@ a {
     width: 100%;
   }
 }
+
+.client-brief-builder {
+  scroll-margin-top: 6rem;
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1rem, 5vw, 5rem);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(248, 211, 108, 0.16), transparent 28%),
+    radial-gradient(circle at 88% 14%, rgba(56, 189, 248, 0.14), transparent 30%),
+    linear-gradient(180deg, #f8fafc 0%, #eef4fb 100%);
+}
+
+.client-brief-intro {
+  margin-bottom: 1.2rem;
+}
+
+.client-brief-note,
+.client-brief-grid {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+}
+
+.client-brief-note {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+  color: #284056;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 1.35rem;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+}
+
+.client-brief-note p {
+  margin: 0;
+}
+
+.client-brief-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.95fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.client-brief-form,
+.client-brief-output {
+  display: grid;
+  gap: 1rem;
+}
+
+.client-brief-group,
+.client-brief-output-card,
+.client-brief-output-heading,
+.client-brief-future {
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #d7e6f3;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+}
+
+.client-brief-group {
+  margin: 0;
+}
+
+.client-brief-group legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 0.35rem;
+  color: var(--navy);
+  font-size: 1.12rem;
+  font-weight: 900;
+}
+
+.client-brief-group legend span,
+.client-brief-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.34rem 0.55rem;
+  color: #082f49;
+  font-size: 0.76rem;
+  font-weight: 900;
+  border-radius: 999px;
+  background: #e0f2fe;
+}
+
+.client-brief-group h3 {
+  margin: 1rem 0 0.7rem;
+  color: #18314c;
+  font-size: 0.98rem;
+}
+
+.client-brief-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.client-brief-field {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.client-brief-field label,
+.client-brief-checkbox-grid label {
+  color: #1f3347;
+  font-weight: 800;
+}
+
+.client-brief-field input,
+.client-brief-field select,
+.client-brief-field textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.75rem 0.85rem;
+  color: var(--text);
+  font: inherit;
+  background: #fbfdff;
+  border: 1px solid #cbdceb;
+  border-radius: 0.85rem;
+  outline: none;
+  transition: border 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.client-brief-field textarea {
+  resize: vertical;
+}
+
+.client-brief-field input:focus,
+.client-brief-field select:focus,
+.client-brief-field textarea:focus {
+  background: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.14);
+}
+
+.client-brief-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.client-brief-checkbox-grid label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0.72rem;
+  background: #f8fbff;
+  border: 1px solid #dbe7f2;
+  border-radius: 0.9rem;
+}
+
+.client-brief-checkbox-grid input {
+  flex: 0 0 auto;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: 0.18rem;
+  accent-color: #0284c7;
+}
+
+.client-brief-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(12, 25, 48, 0.06);
+  border: 1px solid rgba(12, 25, 48, 0.08);
+  border-radius: 1.1rem;
+}
+
+.client-brief-reset {
+  color: #7f1d1d;
+  background: #fee2e2;
+  border-color: #fecaca;
+}
+
+.client-brief-output {
+  position: sticky;
+  top: 6.25rem;
+}
+
+.client-brief-output-heading {
+  display: grid;
+  gap: 0.7rem;
+  background:
+    linear-gradient(135deg, rgba(12, 25, 48, 0.96), rgba(20, 37, 66, 0.94)),
+    #0c1930;
+  border-color: rgba(184, 226, 255, 0.18);
+}
+
+.client-brief-output-heading h3 {
+  margin: 0;
+  color: #f8fbff;
+  font-size: 1.5rem;
+}
+
+.client-brief-output-heading button,
+.client-brief-output-card button {
+  width: fit-content;
+  min-height: 2.35rem;
+  padding: 0.55rem 0.85rem;
+  color: #06101f;
+  font-weight: 850;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.client-brief-output-heading button:focus-visible,
+.client-brief-output-card button:focus-visible,
+.client-brief-actions button:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.45);
+  outline-offset: 2px;
+}
+
+.client-brief-output-card {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.client-brief-output-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.client-brief-output-card h3,
+.client-brief-future h3 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.client-brief-output-card pre {
+  max-height: 430px;
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+  color: #102033;
+  font: 0.92rem/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  white-space: pre-wrap;
+  background: #f6f9fc;
+  border: 1px solid #dfe9f3;
+  border-radius: 0.95rem;
+}
+
+.client-brief-future {
+  background: #fffdf3;
+  border-color: #f5dda1;
+}
+
+.client-brief-future p,
+.client-brief-future li {
+  color: #5f4b17;
+}
+
+.client-brief-future ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.client-brief-status {
+  min-height: 1.6rem;
+  margin: 0;
+  color: #075985;
+  font-weight: 900;
+}
+
+@media (max-width: 1050px) {
+  .client-brief-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-brief-output {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .client-brief-group-grid,
+  .client-brief-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-brief-output-card-header {
+    display: grid;
+  }
+
+  .client-brief-output-heading button,
+  .client-brief-output-card button,
+  .client-brief-actions .button {
+    width: 100%;
+  }
+}
+
+.client-brief-actions .button-secondary {
+  color: #075985;
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}

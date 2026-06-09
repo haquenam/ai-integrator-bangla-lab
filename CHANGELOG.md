@@ -4,7 +4,13 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 ## Upcoming
 
-- রিসোর্স ডাউনলোড ও টেমপ্লেট উন্নয়ন.
+- ক্লায়েন্ট ব্রিফ ডাউনলোড ও টেমপ্লেট উন্নয়ন.
+
+## Version 0.9.0
+
+Client brief builder release.
+
+Included ক্লায়েন্ট ব্রিফ নির্মাতা with project identity, links, language, user journey, feature selection, MVP scope, branding, safety notes, generated client brief, MVP scope, AI build prompt, client confirmation note, copy actions, reset action, and browser local storage saving.
 
 ## Version 0.8.0
 

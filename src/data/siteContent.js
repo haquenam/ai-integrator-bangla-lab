@@ -5,6 +5,7 @@ export const navigationItems = [
   { label: 'অনুশীলন', href: '#practice' },
   { label: 'এজেন্ট স্টুডিও', href: '#prompt-builder' },
   { label: 'পোর্টফোলিও', href: '#portfolio' },
+  { label: 'ক্লায়েন্ট ব্রিফ', href: '#client-brief' },
   { label: 'রিসোর্স', href: '#resources' },
 ];
 
@@ -79,6 +80,13 @@ export const placeholderSections = [
     title: 'পোর্টফোলিও',
     description:
       'প্রজেক্টের বিবরণ, স্ক্রিনশট পরিকল্পনা, রিডমি কাঠামো এবং গিটহাব প্রকাশনার প্রস্তুতি এখানে ধাপে ধাপে দেখানো হবে।',
+  },
+  {
+    id: 'client-brief',
+    eyebrow: 'ক্লায়েন্ট কাজের প্রস্তুতি',
+    title: 'ক্লায়েন্ট ব্রিফ',
+    description:
+      'ক্লায়েন্টের চাহিদা, এমভিপি স্কোপ, এআই বিল্ড প্রম্পট এবং কনফার্মেশন নোট তৈরি করার ইন্টারঅ্যাকটিভ জায়গা।',
   },
   {
     id: 'resources',
