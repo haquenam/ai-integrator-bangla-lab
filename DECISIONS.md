@@ -37,3 +37,8 @@ This decision log records lightweight product and governance decisions for AI In
 ## Decision 9: Resources library starts as a static learning hub
 
 **Reason:** The first resources version provides structured links, guidance, safety notes, and planned resources without file upload, login, backend, or download generation. This keeps the lab simple, safe, and maintainable.
+
+## Decision 10: Client brief builder remains local and copy based
+
+**Reason:**
+The first client brief version captures requirements and generates copyable outputs in the browser only. It does not collect client submissions, upload files, publish to external platforms, or store data on a server. This keeps the lab safe, simple, and suitable for beginner freelancers.
