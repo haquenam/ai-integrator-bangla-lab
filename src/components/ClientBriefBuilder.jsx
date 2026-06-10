@@ -50,6 +50,10 @@ function cleanText(value) {
   return String(value || '').trim();
 }
 
+function toBanglaNumber(value) {
+  return String(value).replace(/\d/g, (digit) => '০১২৩৪৫৬৭৮৯'[Number(digit)]);
+}
+
 function valueOrPlaceholder(value, placeholder = 'ক্লায়েন্টের তথ্য অনুযায়ী পূরণ করুন') {
   return cleanText(value) || placeholder;
 }
@@ -111,7 +115,7 @@ function createGeneratedOutputs(fields, features, mvpIncludes, mvpExcludes) {
     `গোপনীয়তা নোট: ${valueOrPlaceholder(fields.privacyNote)}`,
     `আইনি বা সংবেদনশীল সীমাবদ্ধতা: ${valueOrPlaceholder(fields.legalLimitations)}`,
     `অনুমোদন প্রয়োজন: ${valueOrPlaceholder(fields.approvalNeed)}`,
-    'এই টুল শুধু requirement capture এবং prompt preparation এর জন্য। কোনো কাজ, আয়, অনুমোদন বা সফলতার নিশ্চয়তা দেওয়া যাবে না।',
+    'এই টুল শুধু প্রয়োজনীয় তথ্য গুছানো ও প্রম্পট প্রস্তুতির জন্য। কোনো কাজ, আয়, অনুমোদন বা সফলতার নিশ্চয়তা দেওয়া যাবে না।',
   ].join('\n');
   const extraNotes = [
     `ট্যাগলাইন: ${valueOrPlaceholder(fields.tagline)}`,
@@ -145,7 +149,7 @@ function createGeneratedOutputs(fields, features, mvpIncludes, mvpExcludes) {
     `এই সংস্করণে থাকবে\n${listOrPlaceholder(mvpIncludes)}`,
     `এই সংস্করণে থাকবে না\n${listOrPlaceholder(mvpExcludes)}`,
     `পরবর্তী সংস্করণে রাখা যেতে পারে\n${valueOrPlaceholder(fields.postponedItems, 'ক্লায়েন্টের অনুমোদনের পরে উন্নত ফিচার যোগ করা যেতে পারে।')}`,
-    `মূল অনুমান\nপ্রথম সংস্করণটি হালকা, copy based এবং browser focused MVP হবে। backend, login, payment, database, file upload, download অথবা external API call যোগ করা হবে না।`,
+    `মূল অনুমান\nপ্রথম সংস্করণটি হালকা, কপি-ভিত্তিক এবং ব্রাউজার-কেন্দ্রিক এমভিপি হবে। ব্যাকএন্ড, লগইন, পেমেন্ট, ডাটাবেস, ফাইল আপলোড, ডাউনলোড অথবা external API call যোগ করা হবে না।`,
     `ক্লায়েন্টের অনুমোদন প্রয়োজন\n${valueOrPlaceholder(fields.approvalNeed, 'প্রথম ডেমোর আগে স্কোপ, ভাষা, নিরাপত্তা নিয়ম এবং প্রধান ফিচার অনুমোদন প্রয়োজন।')}`,
   ].join('\n\n');
 
@@ -174,8 +178,8 @@ function createGeneratedOutputs(fields, features, mvpIncludes, mvpExcludes) {
     `সমাধানের ধরন: ${solutionType}`,
     `মূল উদ্দেশ্য: ${purpose}`,
     `লক্ষ্য ব্যবহারকারী: ${targetUsers}`,
-    `প্রথম MVP তে থাকবে: ${mvpIncludes.length ? mvpIncludes.join(', ') : 'ক্লায়েন্ট অনুমোদনের পরে নির্ধারণ করা হবে'}`,
-    `প্রথম MVP তে থাকবে না: ${mvpExcludes.length ? mvpExcludes.join(', ') : 'ক্লায়েন্ট অনুমোদনের পরে নির্ধারণ করা হবে'}`,
+    `প্রথম এমভিপিতে থাকবে: ${mvpIncludes.length ? mvpIncludes.join(', ') : 'ক্লায়েন্ট অনুমোদনের পরে নির্ধারণ করা হবে'}`,
+    `প্রথম এমভিপিতে থাকবে না: ${mvpExcludes.length ? mvpExcludes.join(', ') : 'ক্লায়েন্ট অনুমোদনের পরে নির্ধারণ করা হবে'}`,
     '',
     'অনুগ্রহ করে দেখে জানান, এই স্কোপ ঠিক আছে কি না অথবা কিছু পরিবর্তন দরকার কি না।',
   ].join('\n');
@@ -294,7 +298,7 @@ export default function ClientBriefBuilder() {
     <section className="client-brief-builder" id="client-brief" aria-labelledby="client-brief-title">
       <div className="section-heading client-brief-intro">
         <p className="eyebrow">ক্লায়েন্ট চাহিদা গুছানো</p>
-        <h2 id="client-brief-title">ক্লায়েন্ট ব্রিফ নির্মাতা</h2>
+        <h2 id="client-brief-title">ক্লায়েন্ট ব্রিফ বিল্ডার</h2>
         <p>ক্লায়েন্টের চাহিদা গুছিয়ে অ্যাপ, এজেন্ট বা এআই প্রজেক্টের প্রস্তুত ব্রিফ তৈরি করুন</p>
       </div>
 
@@ -305,7 +309,7 @@ export default function ClientBriefBuilder() {
         <p>
           এই অংশে কোনো লগইন, ডাটাবেস বা সার্ভারে তথ্য পাঠানো হয় না। আপনার লেখা শুধু এই ব্রাউজারে সংরক্ষিত থাকে। বাস্তব ক্লায়েন্টের ব্যক্তিগত, গোপন বা সংবেদনশীল তথ্য ব্যবহার করবেন না।
         </p>
-        <p>এটি শুধু requirement capture এবং prompt preparation tool; কোনো ক্লায়েন্ট, কাজ, আয়, সার্টিফিকেশন, অনুমোদন বা সফলতার নিশ্চয়তা দেয় না।</p>
+        <p>এটি শেখা ও ক্লায়েন্ট আলোচনার প্রস্তুতির জন্য। এটি কাজ, আয়, ক্লায়েন্ট, সার্টিফিকেট বা সফলতার নিশ্চয়তা দেয় না।</p>
       </div>
 
       <div className="client-brief-grid">
@@ -321,7 +325,14 @@ export default function ClientBriefBuilder() {
           ))}
 
           <fieldset className="client-brief-group">
-            <legend>ফিচার নির্বাচন</legend>
+            <legend className="sr-only">ফিচার নির্বাচন</legend>
+            <div className="client-brief-group-heading">
+              <span className="client-brief-step">০৫</span>
+              <div>
+                <h3>ফিচার নির্বাচন</h3>
+                <p>প্রথম সংস্করণে কোন অংশগুলো দরকার হতে পারে নির্বাচন করুন।</p>
+              </div>
+            </div>
             <div className="client-brief-checkbox-grid">
               {featureOptions.map((option) => (
                 <label key={option}>
@@ -337,8 +348,15 @@ export default function ClientBriefBuilder() {
           </fieldset>
 
           <fieldset className="client-brief-group">
-            <legend>এমভিপি সীমা</legend>
-            <h3>Include in MVP</h3>
+            <legend className="sr-only">এমভিপি সীমা</legend>
+            <div className="client-brief-group-heading">
+              <span className="client-brief-step">০৬</span>
+              <div>
+                <h3>এমভিপি সীমা</h3>
+                <p>প্রথম সংস্করণে কী থাকবে এবং কী পরে রাখা হবে তা আলাদা করুন।</p>
+              </div>
+            </div>
+            <h4 className="client-brief-subheading">প্রথম এমভিপিতে থাকবে</h4>
             <div className="client-brief-checkbox-grid">
               {mvpIncludeOptions.map((option) => (
                 <label key={option}>
@@ -351,7 +369,7 @@ export default function ClientBriefBuilder() {
                 </label>
               ))}
             </div>
-            <h3>Do not include in MVP</h3>
+            <h4 className="client-brief-subheading">প্রথম এমভিপিতে থাকবে না</h4>
             <div className="client-brief-checkbox-grid">
               {mvpExcludeOptions.map((option) => (
                 <label key={option}>
@@ -391,7 +409,7 @@ export default function ClientBriefBuilder() {
 
         <aside className="client-brief-output" aria-labelledby="client-brief-output-title">
           <div className="client-brief-output-heading">
-            <span className="client-brief-chip">Copy ready</span>
+            <span className="client-brief-chip">কপি করার জন্য প্রস্তুত</span>
             <h3 id="client-brief-output-title">তৈরি করা আউটপুট</h3>
             <button type="button" onClick={() => handleCopy(allOutputsText)}>
               সব আউটপুট কপি করুন
@@ -423,15 +441,21 @@ export default function ClientBriefBuilder() {
 }
 
 function ClientBriefGroup({ fields, group, groupIndex, onFieldChange }) {
+  const groupNumber = toBanglaNumber(String(groupIndex + 1).padStart(2, '0'));
+
   return (
     <fieldset className="client-brief-group">
-      <legend>
-        <span>{String(groupIndex + 1).padStart(2, '0')}</span>
-        {group.title}
-      </legend>
+      <legend className="sr-only">{`${groupNumber} ${group.title}`}</legend>
+      <div className="client-brief-group-heading">
+        <span className="client-brief-step">{groupNumber}</span>
+        <div>
+          <h3>{group.title}</h3>
+          {group.helper ? <p>{group.helper}</p> : null}
+        </div>
+      </div>
       <div className="client-brief-group-grid">
         {group.fields.map((field) => (
-          <div className="client-brief-field" key={field.id}>
+          <div className={`client-brief-field ${field.type === 'textarea' ? 'client-brief-field-wide' : ''}`} key={field.id}>
             <label htmlFor={`client-brief-${field.id}`}>{field.label}</label>
             {field.type === 'select' ? (
               <select
@@ -451,7 +475,8 @@ function ClientBriefGroup({ fields, group, groupIndex, onFieldChange }) {
               <textarea
                 id={`client-brief-${field.id}`}
                 name={field.id}
-                rows="3"
+                placeholder={field.placeholder || ''}
+                rows="4"
                 value={fields[field.id]}
                 onChange={(event) => onFieldChange(field.id, event.target.value)}
               />
@@ -459,6 +484,7 @@ function ClientBriefGroup({ fields, group, groupIndex, onFieldChange }) {
               <input
                 id={`client-brief-${field.id}`}
                 name={field.id}
+                placeholder={field.placeholder || ''}
                 type="text"
                 value={fields[field.id]}
                 onChange={(event) => onFieldChange(field.id, event.target.value)}
@@ -480,7 +506,7 @@ function OutputCard({ title, buttonLabel, content, onCopy }) {
           {buttonLabel}
         </button>
       </div>
-      <pre>{content || 'ব্রিফ তৈরি করুন চাপলে এখানে আউটপুট দেখা যাবে।'}</pre>
+      <pre>{content || 'ব্রিফ তৈরি করুন ক্লিক করলে এখানে আউটপুট দেখা যাবে।'}</pre>
     </article>
   );
 }
