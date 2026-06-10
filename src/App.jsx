@@ -53,10 +53,10 @@ function Hero() {
       </div>
       <aside className="hero-panel" aria-label="শেখার ল্যাবের মূল দিক">
         <span className="panel-kicker">প্রথম সংস্করণ</span>
-        <h2>ভিডিও থেকে বাস্তব অনুশীলনে যাওয়ার পথ</h2>
+        <h2>ভিডিও দেখা থেকে তৈরি করা পর্যন্ত</h2>
         <p>
-          এই ল্যাব শিক্ষার্থীকে শুধু ধারণা শেখায় না; বরং ছোট কাজ, পরিষ্কার ব্রিফ এবং প্রকাশযোগ্য
-          প্রজেক্টের দিকে নিয়ে যায়।
+          এই ল্যাব আপনাকে শুধু ভিডিও দেখায় না; ছোট কাজ, অনুশীলন, এজেন্ট প্যাক এবং
+          পোর্টফোলিও প্রস্তুতির পথে নিয়ে যায়।
         </p>
         <div className="panel-tags">
           <span>কাস্টম জিপিটি</span>
@@ -86,7 +86,7 @@ function Journey() {
     <section className="section section-light" aria-labelledby="journey-title">
       <div className="section-heading">
         <p className="eyebrow">শিক্ষার্থীর যাত্রা</p>
-        <h2 id="journey-title">দেখা থেকে তৈরি করা পর্যন্ত</h2>
+        <h2 id="journey-title">ভিডিও দেখা থেকে তৈরি করা পর্যন্ত</h2>
         <p>প্রতিটি ধাপ শিক্ষার্থীকে পরবর্তী ব্যবহারিক কাজের জন্য প্রস্তুত করে।</p>
       </div>
       <div className="journey-grid">
