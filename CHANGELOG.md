@@ -6,6 +6,12 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 - ক্লায়েন্ট ব্রিফ ডাউনলোড ও টেমপ্লেট উন্নয়ন.
 
+## Version 0.9.1
+
+Released video 5 site update.
+
+Included the fifth AI Integrator video in the roadmap and resources library, moved video 5 from planned to released resources, and updated the Target 100K subscriber count to 76,834.
+
 ## Version 0.9.0
 
 Client brief builder release.
