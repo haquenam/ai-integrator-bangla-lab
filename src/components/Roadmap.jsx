@@ -80,7 +80,7 @@ function ModuleCard({ module }) {
   );
 }
 
-const banglaNumbers = ['۰۱', '۰۲', '۰۳', '۰۴', '۰۵', '۰۶'];
+const banglaNumbers = ['01', '02', '03', '04', '05', '06'];
 
 function RoadmapMiniCard({ card, index, variant }) {
   return (
@@ -92,19 +92,27 @@ function RoadmapMiniCard({ card, index, variant }) {
   );
 }
 
+function getTargetCount() {
+  const text = target100kCards[0]?.text || '';
+  const match = text.match(/কমিউনিটি (.*?) জনের/);
+  return match?.[1] || '76,834';
+}
+
 export default function Roadmap() {
+  const targetCount = getTargetCount();
+
   return (
     <section className="roadmap-section" id="roadmap" aria-labelledby="roadmap-title">
       <div className="section-heading roadmap-heading">
-        <p className="eyebrow">বর্তমান ۱۰ ভিডিও সিরিজ</p>
-        <h2 id="roadmap-title">۱۰ ধাপে এআই ইন্টিগ্রেটর হওয়ার পথ</h2>
+        <p className="eyebrow">বর্তমান ১০ ভিডিও সিরিজ</p>
+        <h2 id="roadmap-title">১০ ধাপে এআই ইন্টিগ্রেটর হওয়ার পথ</h2>
         <p>
-          এই পথটি বর্তমান ۱۰ ভিডিও সিরিজের সঙ্গে মিলিয়ে সাজানো। প্রতিটি ধাপে থাকবে শেখা,
+          এই পথটি বর্তমান ১০ ভিডিও সিরিজের সঙ্গে মিলিয়ে সাজানো। প্রতিটি ধাপে থাকবে শেখা,
           অনুশীলন এবং পোর্টফোলিও প্রমাণ।
         </p>
       </div>
 
-      <div className="roadmap-grid" aria-label="۱۰ ভিডিও শেখার রোডম্যাপ">
+      <div className="roadmap-grid" aria-label="১০ ভিডিও শেখার রোডম্যাপ">
         {coreRoadmapModules.map((module) => (
           <ModuleCard key={module.number} module={module} />
         ))}
@@ -114,7 +122,7 @@ export default function Roadmap() {
         <div className="roadmap-layer-heading">
           <p className="eyebrow">কমিউনিটির পরবর্তী লক্ষ্য</p>
           <h2 id="target-title">Target 100K</h2>
-          <p>۷۶,۸۳۴ জন থেকে আরও বড় শেখার কমিউনিটির পথে</p>
+          <p>{targetCount} জন থেকে আরও বড় শেখার কমিউনিটির পথে</p>
         </div>
         <div className="roadmap-mini-grid roadmap-mini-grid-four">
           {target100kCards.map((card, index) => (
@@ -127,9 +135,9 @@ export default function Roadmap() {
         <div className="roadmap-layer-heading">
           <p className="eyebrow">ভবিষ্যৎ শেখার দিক</p>
           <h2 id="vision-title">Vision 2028</h2>
-          <p>۱۰ ভিডিওর পরেও শেখার পথ এখানেই শেষ নয়</p>
+          <p>১০ ভিডিওর পরেও শেখার পথ এখানেই শেষ নয়</p>
           <span className="future-note">
-            এগুলো বর্তমান ۱۰ ভিডিও সিরিজের প্রতিশ্রুতি নয়; দীর্ঘমেয়াদি শেখার সম্ভাব্য দিক।
+            এগুলো বর্তমান ১০ ভিডিও সিরিজের প্রতিশ্রুতি নয়; দীর্ঘমেয়াদি শেখার সম্ভাব্য দিক।
           </span>
         </div>
         <div className="roadmap-mini-grid">
