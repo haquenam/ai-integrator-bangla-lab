@@ -6,6 +6,12 @@ All notable changes to AI Integrator Bangla Lab will be documented in this file.
 
 - ক্লায়েন্ট ব্রিফ ডাউনলোড ও টেমপ্লেট উন্নয়ন.
 
+## Version 0.9.2
+
+Released video 6 site update.
+
+Included the AI Integrator Python video in the roadmap and resources library, and moved video 6 from planned to released resources.
+
 ## Version 0.9.1
 
 Released video 5 site update.
