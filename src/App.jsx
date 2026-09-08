@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Roadmap from './components/Roadmap.jsx';
@@ -13,6 +14,74 @@ import {
   journeySteps,
   placeholderSections,
 } from './data/siteContent.js';
+
+function scrollToSection(hash, behavior = 'smooth') {
+  if (!hash || hash === '#') {
+    return;
+  }
+
+  const targetId = decodeURIComponent(hash.slice(1));
+  const target = document.getElementById(targetId);
+
+  if (!target) {
+    return;
+  }
+
+  const header = document.querySelector('.site-header');
+  const headerPosition = header ? window.getComputedStyle(header).position : '';
+  const headerOffset =
+    header && (headerPosition === 'sticky' || headerPosition === 'fixed')
+      ? header.getBoundingClientRect().height
+      : 0;
+  const top = target.getBoundingClientRect().top + window.scrollY - headerOffset - 16;
+
+  window.scrollTo({
+    top: Math.max(0, top),
+    behavior,
+  });
+}
+
+function useSectionNavigation() {
+  useEffect(() => {
+    function handleSectionClick(event) {
+      if (!(event.target instanceof Element)) {
+        return;
+      }
+
+      const anchor = event.target.closest('a[href^="#"]');
+      const hash = anchor?.getAttribute('href');
+
+      if (!hash || hash === '#') {
+        return;
+      }
+
+      const targetId = decodeURIComponent(hash.slice(1));
+      if (!document.getElementById(targetId)) {
+        return;
+      }
+
+      event.preventDefault();
+      window.history.pushState(null, '', hash);
+      scrollToSection(hash);
+    }
+
+    function handleHistoryNavigation() {
+      scrollToSection(window.location.hash, 'auto');
+    }
+
+    document.addEventListener('click', handleSectionClick);
+    window.addEventListener('popstate', handleHistoryNavigation);
+
+    if (window.location.hash) {
+      window.requestAnimationFrame(() => scrollToSection(window.location.hash, 'auto'));
+    }
+
+    return () => {
+      document.removeEventListener('click', handleSectionClick);
+      window.removeEventListener('popstate', handleHistoryNavigation);
+    };
+  }, []);
+}
 
 function Hero() {
   return (
@@ -165,6 +234,8 @@ function PlaceholderSections() {
 }
 
 export default function App() {
+  useSectionNavigation();
+
   return (
     <>
       <Header />
